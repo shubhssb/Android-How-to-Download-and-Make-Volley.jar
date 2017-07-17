@@ -1,0 +1,27 @@
+However if you want to generate the volley.jar manually, below steps will helps you in getting it done...
+
+We will start with installing tools required to clone and build volley project. For this we need git (to clone the project) and ant (to build) tools.
+
+Installing Git:
+----------------------
+Git software is used to clone git projects into your local workspace. Download & install git, once installed run git command in terminal just to make sure that it is accessible via command line. If you are getting git command not found error, add the git installation directory to environmental variables.
+
+Installing apache ant:
+-------------------------
+Apache ant is a command-line tool used to build the source code. Download ant from https://ant.apache.org/bindownload.cgi and add the bin path to environmental variables. You should able to execute ant command too in terminal.
+
+Cloning volley library:
+----------------------------
+Open command prompt, navigate to a location where you want to clone volley and execute following command. This will download a copy of volley library into your local drive.
+
+git clone https://android.googlesource.com/platform/frameworks/volley
+........................................................................................
+
+Making volley.jar:
+-------------------------------
+You can use the volley as a library project to your main project or you can simply generate volley.jar and paste it in project libs folder. To generate volley.jar, move into volley dir (cd volley) and execute below commands.
+
+android update project -p .
+ 
+ant jar
+You can find generated volley.jar in volley bin folder.
